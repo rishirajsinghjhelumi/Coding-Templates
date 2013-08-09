@@ -1,0 +1,1 @@
+main(a,b,c,t){if(scanf("%d",&t)){}while(t--){if(scanf("%d",&a)){}if(c=getchar()){}if(scanf("%d",&b)){}if(c=='+'&&printf("%d\n",a+b)){}else if(c=='-'&&printf("%d\n",a-b)){}else if(printf("%d\n",a*b)){}}}
