@@ -57,7 +57,7 @@ void make_segments(int n)
 	for(i=1; (1<<i) <= n ;i++)
 	{
 		int x = n - (1<<i) + 1;
-		int y = (1 << i) - (1 << (i-1));
+		int y = (1 << (i-1));
 		for(j=0;j<x;j++)
 			segments[j][i] = MIN(segments[j][i-1],segments[j+y][i-1]);
 	}
