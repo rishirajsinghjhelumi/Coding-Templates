@@ -1,0 +1,13 @@
+long long int x,s[2];
+main(t,n)
+{
+	for(scanf("%d",&t);t--&&scanf("%d",&n);)
+	{
+		s[1]=s[0]=0;
+		while(n--&&scanf("%lld",&x)){
+		printf("%d %lld %lld %lld\n",n,s[0],s[1],x);
+			s[n%2]+=n%2?x>0?x:0:x<0?-x:0;}
+		printf("%d %lld %lld %lld\n",n,s[0],s[1],x);
+		printf("%s\n",s[1]<s[0]?"Every Girl Lies!":"Some Mirrors Lie!");
+	}
+}

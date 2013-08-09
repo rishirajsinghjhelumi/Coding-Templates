@@ -1,0 +1,768 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1"><!-- base href="http://www.iwriteiam.nl/SigProgC.html" -->
+
+<title>C signature programs</title>
+</head><body background="SigProgC_files/greybgd.jpg">
+
+<table align="RIGHT" background="SigProgC_files/main_bg.gif" border="0"><tbody><tr><td>
+<a href="http://www.iwriteiam.nl/SigProgM.html" title="Previous"><img src="SigProgC_files/L.gif" alt="Previous" border="0"></a>
+<a href="http://www.iwriteiam.nl/SigProg.html" title="Up"><img src="SigProgC_files/U.gif" alt="Up" border="0"></a>
+<a href="http://www.iwriteiam.nl/SigProgPerl.html" title="Next"><img src="SigProgC_files/R.gif" alt="Next" border="0"></a>
+</td></tr></tbody></table>
+
+<h1>C signature programs</h1>
+
+<a href="http://www.iwriteiam.nl/SigProg.html">Signature programs</a> are short programs that
+people have been using as part of their signature. They are small
+(2 to 4 lines) programs, that are often rather cryptic because they
+have to save space as much as possible. The C program language is
+rather compact programming language which allows to write cryptical
+code. For this reason it is not strange that it is often used for
+signature programs. See also the <a href="http://www.iwriteiam.nl/SigProgM.html">Mandelbrot set
+signature program page</a> for more C signature programs.
+<p>
+For a translation of this page into Bulgarian, see <a href="http://www.fatcow.com/edu/sig-prog-bl/">www.fatcow.com/edu/sig-prog-bl</a>.
+
+</p><h2><a name="cb">Signatures by Chris Brown</a></h2>
+
+
+<pre>/*  _  */main(int k,char**n){char*i=k&amp;1?"+L*;99,RU[,RUo+BeKAA+BECACJ+CAACA"
+/* / ` */"CD+LBCACJ*":1[n],j,l=!k,m;do for(m=*i-48,j=l?m/k:m%k;m&gt;&gt;7?k=1&lt;&lt;m+
+/* |   */8,!l&amp;&amp;puts(&amp;l)**&amp;l:j--;printf("  \0_/"+l));while((l^=3)||l[++i]);}
+/* \_,hris Brown -- All opinions expressed are probably wrong. */
+</pre>
+
+He wrote this one by himself.
+Some older ones by him are:
+
+<pre>main(){char*i="L0[B0BCA7G0BFACIW0BfRAAB0BCACAFR0[BCAFE0LCCAFR0",j,k=0;for(;*i;
+*++i==48&amp;&amp;puts(""))do for(j=*i-48&gt;&gt;k&amp;7;j--;)putchar(k+32);while(k^=3);}
+/**i="ADD08:::::08:::::08:::::08:::::08:R::08::;9:08::D:08:j:08:7&lt;0997&lt;0jh0"*/
+</pre>
+And derived from the above:
+<pre>main(){char*i="ADD08:::::08:::::08:::::08:::::08:R::08::;9:08::D:08:j:08:7&lt;0997&lt;0jh0",
+j,k=0;for(;*i;*++i==48&amp;&amp;puts(""))do for(j=*i-48&gt;&gt;k&amp;7;j--;)putchar(k+32);while(k^=3);}
+</pre>
+
+
+<h2><a name="m">Try to find the name of Martijn using a hang-man game</a></h2>
+
+<pre>/* &lt;xxxxxxxx@xxx.xxx.xx&gt; | Use gcc &lt;signature&gt; to guess my full name */
+main(){char s[]=".bg`z`lE)gc`}{hD-|\\/OI:retteL&gt;\n\n",k;long w=32,r,_,y
+,i,b,g,p[]={63l&lt;&lt;16,37968,15,32,896,2048,24576,37449,2,12546,3074,19138
+,3586,585,0},t;b=g=r=0;while((b&lt;7)&amp;&amp;(g&lt;65278)){for(_=16;_+10;)putchar(_
+--&gt;0?_&amp;7?g&gt;&gt;_&amp;1?s[_]^9:46:w:s[_+w]);while((k=getchar())&lt;65);for(_=15,t=
+g;_;)if((s[_--]^9|w)==(k|w))g|=2&lt;&lt;_;if(t==g)r|=p[b++];for(y=9,t=0;y--;)
+for(_=9;_;)putchar(--_?(i=p[y+6]&gt;&gt;24-3*_&amp;7)?r&gt;&gt;t++&amp;1?s[i+15]:w:w:10);}}
+</pre>
+
+
+<h2><a name="pi">Calculating Pi in 2 lines by Dik T. Winter</a></h2>
+
+The following 160 character C program, written by
+<a href="http://homepages.cwi.nl/%7Edik/">Dik T. Winter</a>
+at CWI, computes pi to 800 decimal digits.
+<pre>int a=10000,b,c=2800,d,e,f[2801],g;main(){for(;b-c;)f[b++]=a/5;for(;d=0,g=c*2;c
+-=14,printf("%.4d",e+d/a),e=d%a)for(b=c;d+=f[b]*a,f[b]=d%--g,d/=g--,--b;d*=b);}
+</pre>
+
+He also wrote one for calculating the first 15,000 digits:
+<pre>a[52514],b,c=52514,d,e,f=1e4,g,h;main(){for(;b=c-=14;h=printf("%04d",
+e+d/f))for(e=d%=f;g=--b*2;d/=g)d=d*b+f*(h?a[b]:f/5),a[b]=d%--g;}
+</pre>
+
+For some background information, read
+<a href="http://web.comlab.ox.ac.uk/oucl/work/jeremy.gibbons/publications/spigot.pdf">
+Unbounded Spigot Algorithms for the Digits of Pi</a>.
+(And <a href="#ds">even shorter</a>.)
+
+<h2><a name="mvk">Eight Queens program written by Marcel van Kervinck</a></h2>
+
+<pre>/* Marcel van Kervinck &lt;xxxxxxx@xxxxx.xxx.xxx.xx&gt; */
+t(a,b,c){int d=0,e=a&amp;~b&amp;~c,f=1;if(a)for(f=0;d=(e-=d)&amp;-e;f+=t(a-d,(b+d)*2,(
+c+d)/2));return f;}main(q){scanf("%d",&amp;q);printf("%d\n",t(~(~0&lt;&lt;q),0,0));}
+</pre>
+
+When the program is run, one has to give a number <code>n</code> (smaller than 32), and
+the program will return in how many ways <code>n</code> Queens can be put
+on a <code>n</code> by <code>n</code> board in such a way that they cannot beat
+each other.
+<p>
+Note that the <code>d=(e-=d)&amp;-e;</code> statement can be compiled wrong
+on certain compilers. The inner assignment should be executed first.
+Otherwise replace it with <code>e-=d,d=e&amp;-e;</code>.
+
+</p><h2><a name="jtan">Happy Birthday program written by Jack Tan</a></h2>
+
+<pre>#define X "Happy birthday to you\n"
+main(){printf(X X"%.15sdear YourName\n"X,X);}
+</pre>
+
+<p> Weighing in at 73+N characters, this was the winner of an informal
+competition to find the smallest C program to print the Happy Birthday
+song for someone whose name is <code>N</code> characters long.  If you're
+interested in the details, ask <a href="http://sdg.ncsa.uiuc.edu/%7Emag/">Tom
+Magliery</a>.
+
+</p><h2><a name="dk">A quote from David Korn, AT&amp;T Bell Labs</a></h2>
+
+<pre>"main() {printf(&amp;unix["\021%six\012\0"],(unix)["have"]+"fun"-0x60);}"
+                                            -- David Korn, AT&amp;T Bell Labs
+</pre>
+
+Used by Bill W. Kelly.
+
+<h2><a name="rp">Risto Paasivirta</a></h2>
+
+A flower printing signature program:
+
+<pre>xxxxxxxx@xxxxx.xxx.xx (Risto Paasivirta).
+char a[1761],*b;main(){int c,k;double d,e=1.111,x,y,z,sin(),cos();for(b=a,
+c=1760;*b++=' ',--c;);for(d=.1;d&lt;=1.3;d+=.2)for((y=d,x=0.0,c=150);c--;){z=
+x*cos(e)-(y-x*x)*sin(e);y=x*sin(e)+(y-x*x)*cos(e);x=z;k=x*20.0+40+((int)(-
+y*10.0+11))*80;if(k&gt;=0&amp;&amp;k&lt;1761)a[k]='*';}puts(a);}
+</pre>
+
+A Pi calculating program:
+<pre>/* Risto Paasivirta, xxxxxxxx@xxx.xx (130.234.0.6) */int a[33235],*b=a,c=1e4,d=
+33234,e,f,g=0,h,i;main(){for(e=d;e--;*b++=2);*b=4;for(e=2501;e--;printf("%04d",
+h))for(b=a+d,f=d;f&gt;-1;g*=f--){i=*b*c+g;h=f?2*f+1:c;g=i/h;*b--=i%h;h=g;}}
+</pre>
+
+(Remark: This program takes some time to complete.)
+
+<h2><a name="jha">A maze generating program by Joseph H. Allen</a></h2>
+
+<pre>/*  xxxxxxx@xxxxx.xxx.xxx (192.74.137.5) */               /* Joseph H. Allen */
+int a[1817];main(z,p,q,r){for(p=80;q+p-80;p-=2*a[p])for(z=9;z--;)q=3&amp;(r=time(0)
++r*57)/7,q=q?q-1?q-2?1-p%79?-1:0:p%79-77?1:0:p&lt;1659?79:0:p&gt;158?-79:0,q?!a[p+q*2
+]?a[p+=a[p+=q]=q]=q:0:0;for(;q++-1817;)printf(q%79?"%c":"%c\n","#"[!a[q-1]]);}
+</pre>
+
+
+<h2><a name="rg">A strange program by Real Gagnon</a></h2>
+
+<pre>-------------------------+ #include &lt;stdio.h&gt;      /* BC ok , Apollo NFG */
+Real Gagnon,             | int main(void) { int i=0;
+Universite de Montreal   | while(putchar(i++["\13Dl~fxym789\26xd"]-i));
+xxxxxxx@xxx.xxxxxxxxx.xx | while(putchar((--i)["\0\t+*)('&amp;%$#\"\1"]+i));}
+</pre>
+
+<h2><a name="jdv">A strange program by Jacques de Villiers</a></h2>
+
+<pre>r(_,i){return putchar(!i?_:' '),i?r(_,--i):(putchar('\r'),_);}main(_){return _
+==' '?_:r(main(_+_/_),_)^_["];!aL#3%17t\211N,=&lt;je\42f\227`&amp;!&amp;-8\42~/KK"]-'!';}
+</pre>
+
+
+<h2><a name="bm">The Sierpinski Gasket by Brendan McKeon</a></h2>
+
+<pre>char c[160],z;main(x,d){for/*/         Brendan McKeon         /*/(x=159;x--
+;c[x]=32);c[79]=z;c[39]=88/*/       xxxxxxx@xxxx.xxx.xx      /*/;for(d=31;x
+=78,puts(c+z),d--;z=80-z)/*/    http://alf2.tcd.ie/~bmckeon /*/for(;--x;c[x
++80-z]=88-56*!(c[z-!0+x]/*/    4th Yr. 'Comp Sci' 'Student'/*/-c[z+x+1]));}
+</pre>
+
+<h2><a name="jh">Two signature programs by Jos Horsmeier</a></h2>
+
+	I carried these little monsters around in my .sig for a
+while. The first one  prints magic squares of odd size. The size
+parameter must be given on the command line. The second little
+thing plays a move of nim. Enjoy ...
+
+<pre>main(o,O0)char**O0;{int OO,O;O=--o?atoi(O0[!0]):!
+0;for(o=((OO=O*O)-O+!0+!0)&gt;&gt;!0;OO;o+=((--OO%O)?-!
+0:((((o-!0)%O)?O:0)+!0))-(((o-!0)%O)?O:0)){printf
+("\n%*d "+!!(OO%O),!0&lt;&lt;!0&lt;&lt;!0,o+=(o&lt;!0)?O*O:0);}}
+</pre>
+
+<pre>int n;main(i,m)char**m;{while(--i)n^=atoi(m[i]);
+while(*++m)if((n^atoi(*m))&lt;atoi(*m)||atoi(*m)*!n
+){printf("%d\n",(n^atoi(*m))-!n);while(*++m)puts
+(*m);m--;}else puts(*m);} /* play: nim &lt;nums&gt; */
+</pre>
+
+<h2><a name="ms">An encryption program by Michael Schroeder</a></h2>
+
+<pre>Michael Schroeder
+main(_){while(_=~getchar())putchar(~_-1/(~(_|32)/13*2-11)*13);}
+</pre>
+
+He also wrote:
+<pre>/* Convex Administration  xxxxxxxxxxxx@xxxx.xxxxxxxxxxxx.xx |
+|__RRZE____________________________________________________*/
+main(_){char*x="=#6#694.21..#62.*.*2-)1#62.*..*.=#=1..29..#";
+while(_=*x/4)_-=8,printf("\n%*s"+!!_,_+_,"_/_/_/"+*x++%4*2);}
+</pre>
+
+He also wrote a <a href="http://www.iwriteiam.nl/SigProgOther.html#ms">another</a> signature
+program.
+
+<h2><a name="cr">A Eight Queens board generating program</a></h2>
+
+<pre>  v,i,j,k,l,s,a[99]; main()   {
+for(scanf("%d",&amp;s);*a-s;v=a[j*=v]-a[i],k=i&lt;s,j+=(v=j&lt;s&amp;&amp;(!k&amp;&amp;!!printf(2+"\n\n%c"
+-(!l&lt;&lt;!j),"#Q"[l^v?(l^j)&amp;1:2])&amp;&amp;++l||a[i]&lt;s&amp;&amp;v&amp;&amp;v-i+j&amp;&amp;v+i-j))&amp;&amp;!(l%=s),v||(i==j
+?a[i+=k]=0:++a[i])&gt;=s*k&amp;&amp;++a[--i]);}    /* Osovlanski and Nissenbaum */
+</pre>
+
+Origin unknown. Submitted by Charles Richmond.
+Seems to be broken.
+
+<a name="jt">
+</a><h2><a name="jt">A maze generator program by </a><a href="http://www.iwriteiam.nl/O_hackers.html#JTromp">John Tromp</a></h2>
+
+<pre>char*M,A,Z,E=40,J[40],T[40];main(C){for(*J=A=scanf(M="%d",&amp;C);
+--            E;             J[              E]             =T
+[E   ]=  E)   printf("._");  for(;(A-=Z=!Z)  ||  (printf("\n|"
+)    ,   A    =              39              ,C             --
+)    ;   Z    ||    printf   (M   ))M[Z]=Z[A-(E   =A[J-Z])&amp;&amp;!C
+&amp;    A   ==             T[                                  A]
+|6&lt;&lt;11&lt;rand()||!C&amp;!Z?J[T[E]=T[A]]=E,J[T[A]=A-Z]=A,"_.":" |"];}
+</pre>
+
+Note that the constant 11 assumes a 15-bit random number generator,
+and needs to be replaced with 27 if <tt>rand()</tt> produces 31-bit numbers
+instead.
+<p>
+See his <a href="http://homepages.cwi.nl/%7Etromp/pearls.html">
+Programming Pearls</a> page for more.
+There is a <a href="http://homepages.cwi.nl/%7Etromp/tetris.html">
+Obfuscated Tetris</a> program of only 1467 characters (just a little
+too long for a signature).
+</p><p>
+See also his <a href="http://www.iwriteiam.nl/SigProgPS.html#jt">Yin-Yang</a> signature.
+
+</p><h2><a name="tdg">Conversion program</a> by <a href="http://www.tmdg.co.uk/">
+	Tom Dawes-Gamble</a></h2>
+
+<pre>main(int c,char **v){long x;while(--c){sscanf(*++v,"%li",&amp;x);
+printf("Decimal = %ld Hex = 0x%lx octal = 0%lo\n",x,x,x);}}
+</pre>
+Args are hex or dec or oct output is hex and dec and oct.
+<p>
+A recent signature program by him is:
+</p><pre>int g(int g){putchar(g);}main(){int c=c==c,h=-~c,a=h+h,*r=(int*)gmtime(&amp;c)+a;
+char*t,i,m,e;*r++=++a,*r=h+c&lt;&lt;h+h;a=mktime(r-a);t=(char*)ctime(&amp;a);i=g(*t+*(t
+-~h));m=g(*++t-(h&lt;&lt;h));e=g(*++t-c);g(*t+h);g(*++t&lt;&lt;c);g(i);g(m);g(e);g(*--t+h
+);e=g(*r-h);g(*t-h);g(*--t+~h*h);g(e);g(g(*t)-(e=(h&lt;&lt;h)+h));g(e);puts(--t);}
+</pre>
+His explaination is:
+<ul>
+A while a go one of my coleagues set me a sort of challenge to write
+a .sig that printed my email address from nothing so to speak. Well I
+think I've done it.
+<p>
+Of course it won't pass -Wall or any lint checks but hey! it works
+on HP-UX and Linux.  Apparently if you try it on a PC running a MicroSquish
+OS it fails with "program too big to run" (HELLO!!!)
+</p><p>
+The program prints my email address and Date of birth. (Note:-
+the time is wrong. But I don't know that anyway.)
+</p><p>
+The program has NO Literals, NO Numbers and it doesn't require
+any input from the user apart from compiling and running the program.
+So I think that it starts with nothing. I've used the minimum number of
+different chars.  I think that there are only 29 different characters in
+the source including newline and space.
+</p></ul>
+<p>
+He also wrote a C and COBOL polygot <a href="http://www.iwriteiam.nl/SigProgOther.html#tdg">signature program</a>.
+
+</p><h2><a name="pl">Some signature programs</a> by <a href="http://www.iwriteiam.nl/O_hackers.html#PLundin" --1--="">Patrik Lundin</a></h2>
+
+Besides a <a href="http://www.iwriteiam.nl/SigProgM.html#pl">A Mandelbrot set</a> signature program,
+he also created the following. A prime number calculator:
+<pre>main(x,y/* Patrik Lundin |       xxxxxx@xxxx.xxxx.xx         */){for(;x++;)
+for(y=2/*  Docentv. 28   |        xxxxxxx@xx.xxxx.xx        */;x%y;)printf(
+++y/x+/*   977 52 Luleaa | http://www.ludd.luth.se/~lundin */"\0%d\n",x);}
+</pre>
+<p>
+A morse coder:
+</p><pre>main(a,b){for(;a=223&amp;getchar()+1;putchar(32))if(a&gt;64&amp;a&lt;92)for(b=0,a=
+"Xzjtpnd~xFTvHhDfRl|P\\^LZJr"[a-66];(a/=2)&gt;1;b+=a%2)b&amp;&amp;putchar(45+a%2);}
+</pre>
+<p>
+A morse decode:
+</p><pre>main(c,r){for(r=0;c=getchar()+1;r=c-33&amp;&amp;c-11?r+r+1+(c
+&lt;47):putchar(" etianmsurwdkgohvf-l-pjbxcyzq"[r])*0);}
+</pre>
+<p>
+A number factorizer:
+</p><pre>main(i,c){for(scanf("%d",&amp;c);1&lt;(c/=i);printf("%d\n",i))for(i=1;c%++i;);}
+</pre>
+
+For more see <a href="http://www.lundin.tm/home/obsqr/obf.htm">his Obfuscated C page</a>.
+
+<h2><a name="bvw">Vigenere encryption/decryption by Bruno Van Wilder</a></h2>
+
+<pre>Bruno Van Wilder			Royal Holloway, University of London
+    main(int n,char**a){for(n=0;putchar(a[2][n]?(a[2][n]%32+(**a%2*2-1)*
+	    (a[1][n++%(a[2]-a[1]-1)]%32-1)+25)%26+97:10)-10;);}
+ 		      (Vigenere encryption/decryption)
+</pre>
+
+<h2><a name="ss">A signature program by Sander Stoks</a></h2>
+
+<pre>/* xxxxxxx@xxx.xxx.xx */  main(){char*c="2$$,$$2CD$45$$,$$5(D$4%$$,$$%(D$4%J\
+*/K*%(K,K2MMPL%2HLH,4LLLL$4HLF$4RLLS$4HL%;5MLLD$5HL&amp;&lt;5MLPL$5HLHL2R,/K$2(K,+";
+int _=0,__,K;for(;_&lt;10;_++){for(__=0;__&lt;11;__++)for(K=0;K&lt;6;)putchar(c[11*_+\
+__]-36&amp;1&lt;&lt;K++&amp;&amp;__*6+K&lt;65?'#':' ');putchar(10);}}         /*ATARI Falcon030 */
+</pre>
+
+<h2><a name="e">ASCII art movie programs by Elijah</a></h2>
+
+<pre>------                                        /* cc signature.c -lm */
+main(){int i,j,k,l;for(i=-12;i&lt;13;i++,printf("\e[H")){for(l=141596885;
+l&gt;8;l&gt;&gt;=4)p(97-(l&gt;&gt;22)+(l&amp;15));for(j=-12;j&lt;12;){for(k=j+12?-12:-6;12&gt;k
+;)p((l=k*k+++i*i+j*j)&lt;144?(l=sqrt(l))[".,:;iIJYVSOM"]:32);j++&lt;11?p(10)
+:0;}}puts("Elijah: xxxxxxxx@xx.xxxxxx.xxx");}p(int m){printf("%c",m);}
+</pre>
+
+and (for St. Patrick's Day):
+<pre>-- /* if(TERM==ANSI) {cc -Dc=`"\e[32m"` sig.c} else {cc -Dc=\"\" sig.c} */
+e(int d){printf("%c",d);}main(){int a=0,b;for(b=141596885;b&gt;8;b&gt;&gt;=4)e(97-(
+b&gt;&gt;22)+(b&amp;15));puts(c);for(;a&lt;128;){b="}////+c)cy////*494y////*979y///+e*"
+"959*ey///*I5Q*939*I5Qy///*96bI3Qb69y///*!777!y///*Y6kIql6Yy///*A5q+9!,A5"
+"9y///+m,YQ-my////-iq~y"[a++];for(;7&amp;b;e("Eli!: MV?JL1m\"P\n"[b--&gt;&gt;3]));}}
+</pre>
+
+<h2><a name="ag">Andrew Garrard</a></h2>
+
+He has a large collection. He is reserving copyright so he can use them
+in the IOCCC - especially the valentine's one, which is perfectly legal
+in spite of four compilers which think otherwise. He also wrote
+<a href="http://www.iwriteiam.nl/SigProgM.html#ag">two Mandelbrot set signature programs</a>.
+<p>
+Full raytracer (name printed, wide, -lm, 73 columns):
+</p><pre>main(c){float x,y=-2,a;for(;2&gt;(y+=.2);puts(""))for(x=-4;4&gt;(x+=.1);printf(
+"%c","MHRXY]i:' "[9&gt;a?(c=21+8*(x-y-7)/a*(3-sqrt(9-a)))&gt;0?c:0:y&lt;1?9:((c=98
+-1.2*x/y)&amp;1^1&amp;(c=-4.8/y))+(a=4*(x-7)+17*y,a*a/81&lt;x*x+16+9*y*y-24*y)&lt;&lt;2]))
+a=8+x*x/2+y*y/2;puts("Andrew Garrard - xxxxxxxxxx@xxxxxxx.xxxxx.xx.xx");}
+</pre>
+
+Full raytracer (3 lines of code because some compilers need the include, no
+name, wide, -lm, 79 columns):
+<pre>#include &lt;math.h&gt; /* Andrew Garrard - xxxxxxxxxx@xxxxxxx.xxxxx.xx.xx */
+main(c){float x,y=-2,a;for(;2&gt;(y+=.2);puts(""))for(x=-4;4&gt;(x+=.1);printf("%c",
+"MHRXY]i:' "[a&lt;9?(c=21+8*(x-y-7)/a*(3-sqrt(9-a)))&gt;0?c:0:y&lt;1?9:((c=98-x*1.2/y)&amp;1
+^1&amp;(c=-4.8/y))+(a=4*(x-7)+17*y,a*a/81&lt;x*x+16+9*y*y-24*y)&lt;&lt;2]))a=8+x*x/2+y*y/2;}
+</pre>
+
+Julia (time dependent, narrow, -lm, doesn't work on Norcroft):
+<pre>/* o._.o Andrew Garrard - xxxxxxtxxx@xxxxxxx.xxxxx.xx.xx */#include &lt;time.h&gt;
+/* ((^)) */main(c){float x,y=2,X,Y,Z,q,t;q=sin(time(0))*1.3;t=sqrt(1.69-q*q);
+/* O)_(O */for(;(x=-2)&lt;(y-=.1);puts(""))for(;Y=y,(X=x+=.05)&lt;2;c=printf("%c",c
+/* O/ \O */["  .-:|O8H#"]))for(;X*X+Y*Y&lt;4&amp;&amp;++c&lt;8;Z=q+X*X-Y*Y,Y=2*X*Y+t,X=Z);}
+</pre>
+
+Perihelion (mildly obfuscated):
+<pre>/*   ___   */int x=-1;int f(){return x+++1&amp;&amp;("MX+###'$##TYC78%##3$##-K`5,##C&amp;"
+/* (/. .\) */"#[PB##&amp;S$#?&amp;WG&lt;P.L)D++%&lt;-%K)T($MC+TI70YL.MGEAM#&lt;Y(9K.MG:C03;LK."
+/*  \(T)/  */"OPFW3,L1:MNW5=KWb=&amp;DX5MNWY15X=]aBM96bLG7]R@''Y(Zb&amp;%^EbCSQ$$bP,/"
+/* O~   ~O */"==1J)0J)&lt;1&gt;"[x/6])-35&amp;1&lt;&lt;x%6;}main(y){return y-440&amp;&amp;printf("%s",
+/*  ()-()  */" \0\\\0|\0/\0.\0'\0_\0\n\0[\0[]\0:_:\0[ |\0 ||  \x00[__] \0__\0"
+/* Andrew  */"'.__.'\0"+(f()?f()?f()?29:f()?8:f()?35:f()?44:f()?21:f()?16:18:f
+/* Garrard */()?f()?f()?6:14:f()?41:f()?2:25:f()?4:f()?12:10:0))&amp;&amp;main(++y);}
+</pre>
+
+Perihelion (my bear):
+<pre>/* .O_       */int y=0,x=-1;int f(){x++;return("MX+###'$##TYC78%##3$##-K`5,##C"
+/*:  .\__    */"&amp;#[PB##&amp;S$#?&amp;WG&lt;P.L)D++%&lt;-%K)T($MC+TI70YL.MGEAM#&lt;Y(9K.MG:C03;L"
+/*O.(4) _()  */"K.OPFW3,L1:MNW5=KWb=&amp;DX5MNWY15X=]aBM96bLG7]R@''Y(Zb&amp;%^EbCSQ$$b"
+/* \_ .''.\_ */"P,/==1J)0J)&lt;1&gt;"[x/6])-35&amp;1&lt;&lt;x%6;}main(){for(y=0;y++&lt;439;)printf
+/*  / '..'__()*/("%s"," \0\\\0|\0/\0.\0'\0_\0\n\0[\0[]\0:_:\0[ |\0 ||  \0[__] "
+/* ()/\____() */"\0__\0'.__.'\0"+(f()?f()?f()?29:f()?8:f()?35:f()?44:f()?21:f()
+/* Fluppeteer */?16:18:f()?f()?f()?6:14:f()?41:f()?2:25:f()?4:f()?12:10:0));}
+</pre>
+
+Christmas tree (short but unintelligible):
+<pre>/*      _     *//* Andrew Garrard */int y,z;main(x){x=(x&gt;0?-9:x);z=((z=(x+5)
+/*  /:^/ \_/))*/)&gt;0?z:-z);printf(!x&amp;&amp;++y?"\n":z?z&gt;y%3+y/3?" ":x&lt;-5?"/":"\\":
+/**&lt;_o_(\__// */y?"|":"*");y-9?main(++x):puts("  _|_|_")&amp;&amp;puts("  \\___/");}
+/*   D-|\O    *//* A party animal is for life ... not just for Christmas. */
+</pre>
+
+Christmas tree (cute but long):
+<pre>/*    *    Andrew Garrard - xxxxxexxxx@xxxxx.xx.xx */
+/*   /_\   */int y,z;main(x){x=(x&gt;0?-9:x);z=((z=(x+5)
+/*  o. .o  */)&gt;0?z:-z);printf(!x&amp;&amp;++y?"\n":z?z&gt;y%3+y/
+/*  ((Y))  */3?" ":x&lt;-5?"/":"\\":y?"|":"*");y-9?main(
+/* ()) (() */++x):puts("  _|_|_")&amp;&amp;puts("  \\___/");}
+/*  ()^()  A party animal isn't just for Christmas.*/
+</pre>
+
+Valentines (has broken Watcom, Norcroft, Dice and Lint so far...):
+<pre>/*  db.db  Andrew Garrard */int x,y,X;Q(Z,Y){Y=y&lt;16?X=x-30,Y=y-17,225&gt;X*X+Y
+*/* `888' */Y:x&gt;y,y+=y%2*2*(!(x+=y&amp;x==39?-x:y&amp;1)-1)+1;return Z?Y+2*Q(--Z,--
+X)/* `8' */:Y;}main(){for(;y-42;puts(""))M(y);}M(z){printf("%c",(printf("%"
+"c"," ',""[`~/P.\\wb]9dM"[z=Q(3,7)]),x&amp;&amp;M(*""),z)[" `.]'~\\9,/wd[PbM\""]);}
+</pre>
+
+Life... don't talk to me about life (or Get a life, depending...):
+<pre>long l=17895696,p,m[8],n[8]={0,65536,4096,1118208},y,z;main(x){for(;p++^14;
+){for(;puts(""),y&lt;8;++y)for(x=7;x--;printf("%c",".#"[1&amp;n[y]&gt;&gt;4*x]));for(;++
+x&lt;7;m[x]-=n[x],m[x]=((m[x]/8|m[x]/4)&amp;l^l)&amp;m[x]/2&amp;(m[x]|n[x]))for(m[x]=0,y=4
+;--y;m[x]+=z*17+z/16)z=n[x+y-2];for(;--x;n[x]=m[x]);}} /* Andrew Garrard */
+</pre>
+
+He has some more longer <a href="http://www.iwriteiam.nl/SigGarrard.html">signature programs</a>.
+
+<h2><a name="rh">Programs</a> by <a href="http://pauillac.inria.fr/%7Eharley/">Robert Harley</a></h2>
+
+A Rot-13 filter:
+<pre>main(g,h){for(;h=getchar(),h&gt;=0;putchar(g&lt;65||g&gt;90?h:g&lt;78?h+13:h-13))g=h&amp;223;}
+</pre>
+
+A program which generates 2569 decimals of e:
+<pre>main(i){int j,s,d[1001];for(i=1e3;i;)d[i--]=1;for(printf("e&gt;2.");++/*R.Harley*/
+i&lt;429;printf("%06d",s))for(s=0,j=1e3;j&gt;1;d[j]=s%j,s/=j--)s+=1e6*d[j];puts("");}
+</pre>
+<p>
+He also wrote <a href="http://www.iwriteiam.nl/SigProgM.html#rh">A Mandelbrot fractal in .pgm format signature</a>.
+</p><p>
+Program which prints a solution of the Eight Queens problem:
+</p><pre>q(a,b,c){int e,f,i=8;for(;a&amp;&amp;i--;)if(e=1&lt;&lt;i,f=e&lt;&lt;a|e&lt;&lt;24-a,!(b&amp;e||/*R. Harley*/
+c&amp;f)&amp;&amp;q(a-1,b|e,c|f))return printf("%08x\n",1&lt;&lt;i*4);return!a;}main(){q(8,0,0);}
+</pre>
+
+<h2><a name="bw">World map and locations</a> by <a href="http://www.westley.org/">Brian Westley</a></h2>
+
+This program prints a world map with your location marked.
+Run it as `<tt>prog 45 -93</tt>' for e.g. latitude N 45, W 93 (south &amp; west
+are negative numbers).  Your terminal must autowrap at 80 chars.
+
+<pre>main(    M,e,r,l,y,n   )char**e;{for(l=atoi(e[1])/10*80-atoi(e[2])/5-836;r="\
+@Q@t@    L,e,R,o,y     NKACLCCGZAAQBEAADAFaISADJABBA^SNLGAQABDAXIMBAACTBATAH\
+DBANZ    -----------   cEMMCCCCAAhEIJFAEAAABAfHJETBdFLDAANEfDNBPHdBcBBBEA_Ax"
+[M++-3];)for(;r--&gt;64;)putchar(!l+++33^M&amp;1);}/*Run w/lat &amp; long as arguments*/
+</pre>
+(By the way, he was the one who nominated me for the Geek Site of the Day.)
+
+<h2><a name="mh">Playing Mastermind by Martin Haring</a></h2>
+
+<pre>/* Martin Haring &lt;xxxxxxxx@xxxxxx.xxxxxx.xx&gt; || use gcc to play mastermind */
+main(){int i=0,j,e,p,a[4],b;srand(time(0));for(;i&lt;4;i++){a[i]=rand()%8;for(j=
+0;j&lt;i;j++)if(a[i]==a[j])i--;}printf("A B C D GP\n");do{system("stty cbreak");
+e=p=0;for(i=0;i&lt;4;i++){b=getchar()&amp;7;printf(" ");if(b==a[i])p++;for(j=0;j&lt;4;j
+++)if(b==a[j])e++;}system("stty cooked");printf("%d%d\n",e-p,p);}while(p&lt;4);}
+</pre>
+He also has a Perl <a href="http://www.iwriteiam.nl/SigProgPerl.html#mh">version</a> of this signature.
+
+<h2><a name="dd">A hiding program signature by Dario Dariol</a></h2>
+
+<pre>main(){while(!fork())sleep(1);}
+</pre>
+
+This simple one-line C-program included is a program that hide
+itself when it runs on a UNIX machine. You have some difficulties
+to kill it because it changes PID every second. Dario also wrote
+some <a href="http://www.iwriteiam.nl/SigProgS.html#dd">self printing programs</a>.
+
+<h2><a name="jr">A Tic-Tac-Toe program signature by John Rickard</a></h2>
+
+<pre>#define f(X,g,p,N,M)M{return X?a&amp;b?a&amp;b&amp;1&lt;&lt;i&amp;&amp;m(b,a^1&lt;&lt;i,9)&gt;8?i:M:0:9;}main(){\
+int a=511,b=a,i=4;for(;X;b^=1&lt;&lt;N)a^=1&lt;&lt;g-'1',g,p(N+'1'),p('\n');}    /* 123 */
+f(i--&amp;&amp;b&amp;7&amp;&amp;b&amp;56&amp;&amp;b&amp;448&amp;&amp;b&amp;73&amp;&amp;b&amp;146&amp;&amp;b&amp;292&amp;&amp;b  /* John Rickard   */ /* 456 */
+&amp;273&amp;&amp;b&amp;84,getchar(),putchar,m(b,a,9),m(a,b,i)) /* xxx@xxxx.xx.xx */ /* 789 */
+</pre>
+
+Moves are given by the number 1 to 9, according to layout given in the
+signature. This program does never lose, but sometimes fails to win, when
+it could have won.
+
+
+<h2><a name="cg">A signature program by Chris Goldsmith</a></h2>
+
+<pre>/*--Chris--*/main(){char*s="NDDGNLALAPAEDIDBBBBPADDIDB@B@PALGGDLAJCPAD"
+/*Goldsmith*/"DED@BBBPAEDEDBBBBPNDDINLILIP",j;for(;*s;printf("\0\n"+((*
+/*---------*/s++&amp;j)==j)))for(j=1;j&lt;=8;j*=2)printf("  \0_/"+(*s&amp;j?3:0));}
+</pre>
+
+<h2><a name="me">A signature program</a> by <a href="http://www.iwriteiam.nl/index.html">me</a></h2>
+
+<pre>On unix: tail -2&gt;sig.c;make sig;./sig &lt;sig.c
+main(){int v=77+97*121+32,c=71+111/100*32;while(v&amp;&amp;98)if(scanf("%d",&amp;v)+108==
+101+8&amp;&amp;v+115&gt;9+115)putchar(++v- 32*4+121- 111+117);else- 10+getchar()+0;}
+</pre>
+
+<h2>A <a name="bfi" href="http://www.iwriteiam.nl/Ha_BF.html">Brainf***</a> interpreter signature</h2>
+
+<pre>char m[9999],*n[99],*r=m,*p=m+5000,**s=n,d,c;main(){for(read(0,r,4000);c=*r;
+r++)c-']'||(d&gt;1||(r=*p?*s:(--s,r)),!d||d--),c-'['||d++||(*++s=r),d||(*p+=c==
+'+',*p-=c=='-',p+=c=='&gt;',p-=c=='&lt;',c-'.'||write(2,p,1),c-','||read(2,p,1));}
+</pre>
+
+(<a href="#eb">Eric Bock</a> also wrote one.)
+
+<h2><a name="ajm">A simple three-response magic eight ball signature</a></h2>
+
+Anthony J. "Tony" Mills wrote this signature program:
+<pre>/* --==[ Anthony J. "Tony" Mills ]==-----==[ ????????????????? ]==-- */
+T,M;main(){for(time(&amp;M),M%=3;T=M["xzoifpzt\1\1\1"]-1;putchar(T,M+=3));}
+</pre>
+
+<h2><a name="sc">A day-of-the-week signature program by Sidney Cadot</a></h2>
+
+
+<pre>+--------------------------------------------------------------------------+
+| -- Sidney Cadot - xxxxxx@xx.xxx.xxxxxxx.xx - ITS/TU Delft - tst. 3850 -- |
++--------------------------------------------------------------------------+
+|/* C-code to calculate day-of-week (1901-2099). Type name for man page. */|
+|main(int c,char**v){exit(printf("%sday.\n","Use MM/DD/YYYY argument to c" |
+|"alculate week\0Mon\0/0/Tues\0/0Wednes\0Thurs\0/Fri\0/0/Satur\0/Sun"+(*++ |
+|v?42+((5*atoi(6+*v)+"@GSTDLXDP@HT@"[atoi(*v)])/4+atoi(3+*v))%7*7:0))/30);}|
++--------------------------------------------------------------------------+
+</pre>
+
+<h2>a <a name="eb" href="#bfi">Brainf*** interpreter</a> signature by
+	<a href="http://www.iwriteiam.nl/Broken.html?no%20connection%7Chttp://www.users.qwest.net/%7Eebock/index.html">Eric Bock</a></h2>
+
+
+<pre>/* Eric */main(s,i,j,k,c){char*p=malloc(s=1),*a=p+(*p=i=j=k=0)/* Bock */
+;while(~(*a=getchar())&amp;&amp;(++a-p&lt;s||(a=(p=realloc(p,s+s))+s)&amp;&amp;(s+=s))||(*a
+=0));for(a=malloc(s=1),*a=0;(c=p[i])&amp;&amp;(c=='+'&amp;&amp;++a[j]||c=='-'&amp;&amp;--a[j]||c
+=='&gt;'&amp;&amp;(++j&lt;s||(a=realloc(a,s+s))&amp;&amp;memset(a+s,0,s)&amp;&amp;(s+=s))||c=='&lt;'&amp;&amp;j--
+||c=='.'&amp;&amp;~putchar(a[j])||c==','&amp;&amp;~(a[j]=getchar()))|!strchr("&gt;&lt;.,",c);i
+++)while((c=='['&amp;&amp;!a[j]||c==']'&amp;&amp;a[j])&amp;&amp;(k+=(p[i]=='[')-(p[i]==']'))&amp;&amp;p[
+i+=c/* Brainf*** */=='[']&amp;&amp;(/* worse than */i-=c==']'/* this sig! */));}
+</pre>
+
+<h2><a name="mvw">Signature programs by Mark VandeWettering</a></h2><a name="mvw">
+
+His first is </a><a href="http://www.iwriteiam.nl/SigProgM.html#mvw">Mandelbrot set signature program</a>.
+His second is a <a href="http://www.iwriteiam.nl/Ha_BF.html">Brainf**k to C</a> compiler signature
+program:
+
+<pre>#define P(C,X)case C:printf(#X);break; /* bftoc.c by xxxxx@xxxxx.xxx */
+main(){int c;printf("char a[9999];main(){char*p=a;");while((c=getchar())&gt;=0)
+{switch(c){P(62,p++;)P(60,p--;)P(43,++*p;)P(45,--*p;)P(46,putchar(*p);)P(44,
+*p=getchar();)P(91,while(*p){)P(93,});}}printf("exit(0);}");exit(0);}
+</pre>
+The program works like a pipe.
+
+<h2><a name="mp">Signature program by Mauro Persano</a></h2>
+
+A peace sign signature program:
+<pre>int i,j,d;main(){for(;i&lt;25;i++)for(j=48;j;putchar(!j?10:" #"[(d&lt;150&amp;&amp;d&gt;81)||(d&lt;
+150&amp;&amp;(abs(24-j)&lt;2||(i&gt;12&amp;&amp;(abs(j-i-12)&lt;2||abs(48-j-i-12)&lt;2))))]))d=(24-j)*(25-(
+--j))+(12-i)*(12-i);}
+</pre>
+
+
+A yin-yang signature program:
+<pre>int q,Q,w,z;_(o){w=q-10*o;z=Q-20;return w*w+z*z;}main(){for(;q&lt;40;q+=!(Q%=40),
+putchar(!Q++?10:_(2)&gt;400?32:".*"[w&lt;0?(_(1)&lt;99|z&gt;0)&amp;&amp;_(1)&gt;7:z&gt;0&amp;&amp;_(3)&gt;99||_(3)&lt;
+7]));}
+</pre>
+
+An prefix expression evaluator signature program:
+
+<pre>#include&lt;stdio.h&gt;/* gcc sig.c; echo '(* (+ 2 5) 6)' | a.out * Mauro Persano */
+c;x(){while(isspace(c=getchar()));}main(){printf("%d",y());}y(){int v,t,a,b;x(
+);c&gt;47&amp;&amp;c&lt;58?ungetc(c,stdin),scanf("%d",&amp;v):c==40?x(),t=c-42,a=y(),b=y(),v=!t?
+a*b:t==1?a+b:t==3?a-b:t==5?a/b:exit(1),x(),c==41||exit(1):exit(1);return v;}
+</pre>
+
+<h2><a name="er">Signature program by Erik Rigtorp</a></h2>
+
+He has written a signature program that animates his
+initials like a sinewave. It is ansi C except there is no
+include files. Functions from stdio.h and unistd.h are used.
+The license is GPL.
+
+<pre>main(){int i,a,e[10]={255,137,129,129,0,255,25,41,70,128},s[16]={3,4,5,6,
+6,6,5,4,3,2,1,0,0,0,1,2},n=0;while(1){puts("\e[2J\e[1;1H");for(i=0;i!=10;
+i++){for(a=s[(i+n)&amp;0xF]+4;a!=0;a--)printf(" ");for(a=7;a&gt;=0;a--){if(((e[i]
+&gt;&gt;a)&amp;1)==1){printf("#");}else{printf(" ");}}puts();}n++;usleep(40000);}}
+</pre>
+
+<h2>Signature programs by <a name="sed" href="http://sed.free.fr/">Sed</a></h2>
+
+<pre>main(){int i,j;{printf("\n      Who did you say ? Sierpinski ?      \n");}
+for(i=0;i&lt;80;i++){for(j=0;j&lt;80;j++)printf("%c",i&amp;j?'.':' ');printf("\n");}
+printf("\n   Life is a beach - George Sand (1804-1876)  \n\n"); return 0;}
+</pre>
+
+<pre>char*t= "u]Gd\\wa[nc[eHEdBQbhb`hgHWRLSbYfaYeHAIPQbhb`heHQINwihnkh";int
+main(void) {int i=0,c;for(;i&lt;330;c&gt;&gt;=1){if(i++%6==0)c=*t++;printf(i%66
+?"%c":"%c\n",c&amp;1?'|':' ');}return printf("is a nice little thing\n");}
+</pre>
+
+<h2>A Master Mind signature program by
+	<a name="cl" href="http://kandjar76.free.fr/">Cédric Lallain</a></h2>
+
+The following signature program implements a Master Mind solver. You have
+to pick a secret code, and the program will guess it. After each guess, you
+should respond with two numbers.
+
+<pre>int C,e,d,r,i,c,L[10000],_=1e4,Q[4],O[4];o(){for(C=rand();L[++C,C%=e];
+);}q(i,c){for(d=4;d--;i-=Q[d]==O[d]);for(;++d&amp;gt;16;)Q[d&amp;3]==O[d/4]&amp;Q[d&amp;3
+]&gt;=0?c+=Q[d&amp;3]=O[d/4]=-1:0;return i|c;}F(c){printf("%04i%c",_?o(),C:-1
+,c);}main(n){for(e=_;_&lt;1;)for(F(63),scanf("%i%i",&amp;i,&amp;c),n=e;n--;q(i,c+
+i)?_-=!L[n]++:0)for(r=1,d=4;d--;r*=10)O[d]=C/r%10,Q[d]=n/r%10;F(46);}
+</pre>
+
+<h2>Signature program by
+	<a name="vl" href="http://ace.planet-d.net/">Vianney 'ace' Lecroart</a></h2>
+
+The signature program below produces a BMP with an interesting patterns
+that contains a hidden code.
+
+<pre>int a,c,e,_[14]={0xf4364d42,1,54&lt;&lt;16,40&lt;&lt;16,50&lt;&lt;20,5&lt;&lt;20,1&lt;&lt;16,16};t(p
+){fputc(p*c,a);}main(i){for(fwrite(_,1,54,a=fopen("a.bmp","wb"));64e3&gt;
+i;t(4))e=i/16000*80+i%800/10,c=(i+i++/800)&amp;1?("UEUJmbUiILefR]uQyrxruf\
+VQ[JWUEjJaJuJBEkHU}_iDMnHi]Ldve@"[e/6]&gt;&gt;e%6)&amp;1:i,t(6);}
+</pre>
+
+<h2>Signature program by <a name="tos" href="http://slashdot.org/%7Etyrecius">Tyrecius on Slashdot</a></h2>
+
+You want to know the Endianicity of your machine?
+<pre>char a[]="lbiitgt l e \n\n\0";main(){for(char*c=a; *(short*)c;c+=2){putchar(*(short*)c);}}
+</pre>
+
+<h2><a name="ds">Signature program by Darren Smith</a></h2>
+
+The first is 112 characters long and <a href="http://www.iwriteiam.nl/SigProgC.html#pi">calculates pi</a> to 2880 decimal places:
+
+<pre>g,o,p,i=1e4,a[10001];main(x){for(;p?g=g/x*p+a[p]*i+2*!o:
+53^(printf("%.4d",o+g/i),p=i,o=g%i);a[p--]=g%x)x=p*2-1;}
+</pre>
+
+The next isn't pi, but e. It is 84 characters long and calculates e to
+992 decimal places:
+
+<pre>a[999],x,n;main(N){for(;n||(putchar(48^x),
+n=998+--N);x+=10*a[--n]+!N)a[n]=x%n,x/=n;}
+</pre>
+
+<h2>Signature progam by <a name="jfs" href="http://slashdot.org/%7Ele_jfs">le_jfs</a></h2>
+
+<pre>main(char O){O++&amp;&amp;(((O-291)*O+27788)*O-868020?1:putchar(O++) )&amp;&amp;main(O);}
+</pre>
+
+<h2>Signature programs by <a name="gcl" href="http://alas.matf.bg.ac.yu/%7Echupcko/">Goran "CHUPCKO" Lazic</a></h2>
+
+He also has some signature programs in <a href="http://www.iwriteiam.nl/SigProgPS.html#gcl">PostScript</a> and <a href="http://www.iwriteiam.nl/SigProgOther.html#gcl">Brainf***</a>.
+
+<pre>main(c,h,p){for(c/*__*/=21;c--;puts
+(""))for(h=c%2?3/*/  \*/:0,p=73;p-=
+printf("%.*s",p,"\\__/  "+h);h=0);}
+</pre>
+<p>
+</p><pre>int _[16];m(x,i,f,z){for(f=z=-9,i=0;i&lt;16;i++)f=_[i]==x?i:f,z=_[i]?z:i;i
+=abs(f-z);if((i==1&amp;&amp;f/4==z/4)||i==4)i=_[f],_[f]=_[z],_[z]=i;}main(i,j){
+srand(time(0));for(i=0;i&lt;9999;i++)i&lt;15?_[i]=i+1:m(rand()%15+1);for(;;){
+for(j=i=0;i&lt;16;j+=_[i]==++i)printf(_[i]?"%c%2d":"%c  ",i%4?' ':'\n',_[i
+]);if(j&gt;14&amp;&amp;puts("\n\nYou WIN"))break;printf("\n\nMove ? ");scanf("%d",
+&amp;i)||scanf("%*[^0-9]");m(i);}} /* http://alas.matf.bg.ac.yu/~chupcko */
+</pre>
+<p>
+</p><pre>/*  chupcko - matf.bg.ac.yu  */int _[25];c(h,p){h&gt;0&amp;&amp;h&lt;6&amp;&amp;p&gt;0&amp;&amp;p&lt;6&amp;&amp;(_
+[5*p+h-6]^=1);}main(h,p){for(;;){printf("  1 2 3 4 5");for(h=p=0;h&lt;25;
+p+=_[h++]){h%5||printf("\n%d",h/5+1);printf(_[h]?" *":" .");}if(p&gt;24&amp;&amp;
+puts("\n\nYou WIN"))break;printf("\n\nMove ? ");scanf("%d",&amp;p)||scanf(
+"%*[^0-9]");h=p/10;p%=10;c(h-1,p);c(h,p);c(h+1,p);c(h,p-1);c(h,p+1);}}
+</pre>
+<p>
+</p><pre>main(c,h,p){p=15e4;while((c=getchar())&gt;0){for(h=0;h&lt;29&amp;&amp;h["ETINAMSDRG"
+"UKWOHBLZFCP\0VX\0Q\0YJ"]!=(c&amp;223);h++);if(h&lt;29)for(h+=2;h&gt;1;h/=2){c=h
+&amp;1;puts(c++?"\033[11;225]\a":"\033[11;75]\a");usleep(p*c);}else usleep
+(p*2);usleep(p*2);}} /* echo CHUPCKO morse | ./a.out &gt; /dev/console */
+</pre>
+<p>
+</p><pre>int _[32];main(c,h,p){*_=1;for(c=32;c--;){for(h=c;h   /***********/
+--;)printf(" ");for(h=0;h&lt;32-c;)printf(_[h++]?"/\\"  /* CHUPCKO */
+:"  ");puts("");for(p=h=1;h&lt;32;p^=_[h++])_[h]^=p;}} /***********/
+</pre>
+<p>
+</p><pre>int _[33]={1};main(c,h,p){for(c=32;h=c--;puts("")){for(;--h;)printf(" ")
+;for(p=h=1;h&lt;33-c;p^=h++[_])printf(p?"/\\":"  ",h[_]^=p);}}/* CHUPCKO */
+</pre>
+<p>
+</p><pre>int _[32]={1};main(c,h,p){for(c=32;c--;puts(""))for(printf("%*s",c,""),p=
+h=0;32-c-h;printf(h++[_]?c%2?"/\\":h%2?"/_":"_\\":"  "))h[_]^=p,p^=h[_];}
+</pre>
+<p>
+</p><pre>#define m(x,y,z) main(){x##puts(y);##z}
+#define p m(char c[80];if(gets(c)){main();,c,})
+p
+#define p m(,"Hello world!",)
+#define m(x,y,z) main(){x##puts(y);##z}
+</pre>
+<p>
+Barcode generating signature:
+</p><pre>int/* ./a.out 4008155013759 | xv - */c,h,p;x(y){for(c^=1;1+y--;putchar(p
+&lt;6?1:c));}y(z){for(p^=63;z--;x(0));p^=63;}main(int/* EAN13 by CHUPCKO */
+i,char*_[]){char*z="\220TE0\t\30\3!\22\201\0$,\34\62&amp;\16*\32\26";for(p=4
+*printf("P5 95 44 1\n");p--;y(3))for(c=1,y(3),i=1;i&lt;13;i++)for(i==7&amp;&amp;y(5
+),h=0;h&lt;8;h+=2)x(z[i[1[_]]-48]&gt;&gt;((i&lt;7&amp;&amp;z[*1[_]-38]&amp;1&lt;&lt;i-1)?h:(6-h))&amp;3);}
+</pre>
+<p>
+Another Sierpinski triangle:
+</p><pre>#define d 500 /* ./a.out &gt; a.pgm; file a.pgm; xv a.pgm; : /\ CHUPCKO */
+int _[6+d*d]={d-9,9,d-9,d-9,9,d/2};main(x,y,i,n){for(x=/*/__\*/y=i=0;++
+i&lt;3e4;_[6+x*d+y]=1)x+=_[n=rand()%3*2],x/=2,y+=_[n+1],y/*/\  /\*//=2;for
+(printf("P5 %d %d 1\n",d,d),i=5;i&lt;5+d*d;putchar(!_[++/*/__\/__\*/i]));}
+</pre>
+
+<h2><a name="899">89 or 99?</a></h2>
+
+The following signature prints 89 for Ansi C and 99 for C99.
+From <a href="http://groups.google.com/group/alt.lang.intercal/browse_thread/thread/36b4474da41ebb99/0cc653ffbc4c344e?lnk=gst&amp;q=C99&amp;rnum=1&amp;hl=en#0cc653ffbc4c344e">new://alt.lang.intercal, Subject: Two Programs</a>.
+
+<pre>#include &lt;stdio.h&gt;
+int main(){printf("%d\n",(int)(90-(-4.5//**/
+         -4.5)));  return 0;}  /* ais523@?????????? */
+</pre>
+
+
+<p></p><hr>
+<address>
+<a href="http://www.iwriteiam.nl/SigProg.html">Signature programs</a> |
+<a href="http://www.iwriteiam.nl/index.html">home and email</a>
+</address>
+<pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+
+</body></html>

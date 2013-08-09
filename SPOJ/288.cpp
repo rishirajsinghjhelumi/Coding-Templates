@@ -1,0 +1,48 @@
+#include <iostream>
+#include <cstdio>
+#include <cassert>
+#include <cmath>
+#include<stdio.h>
+int check = 0;
+void print_primes_range( int nLowBound, int nUpBound )
+{
+	const int nCompositeBuffSize = 100001;
+	bool nIsComposite[nCompositeBuffSize] = { false, };
+	assert( nUpBound-nLowBound < nCompositeBuffSize );
+	int nSqRootOfUpBound = static_cast<int>( sqrt( nUpBound ) );
+	for( int i=2; i<=nSqRootOfUpBound; i++ )
+	{
+		if( (i!=2 && i%2==0) || (i!=3 && i%3==0) || (i!=5 && i%5==0) )
+			continue;
+
+		int j;
+		if( i>=nLowBound )
+			j = i+i;
+		else if( nLowBound%i == 0 )
+			j = nLowBound;
+		else
+			j = nLowBound - nLowBound%i + i;
+		for( ; j<=nUpBound; j+=i )
+		{
+			nIsComposite[j-nLowBound] = true;
+		}
+	}
+	for( int i=nLowBound==1 ? 2 : nLowBound; i<=nUpBound; i++ )
+		if( !nIsComposite[i-nLowBound] )
+			check=1;
+}
+
+int main()
+{
+	int test_cases;
+	scanf("%d",&test_cases);
+	while(test_cases--)
+	{
+		unsigned long long int a;
+		scanf("%llu",&a);
+		print_primes_range(a,a);
+		printf("%s\n",check==1?"YES":"NO");
+		check = 0;
+	}
+	return 0;
+}

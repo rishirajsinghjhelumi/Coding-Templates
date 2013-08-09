@@ -1,0 +1,138 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1"><!-- base href="http://www.iwriteiam.nl/SigProgS.html" -->
+
+<title>Self printing signature programs</title>
+</head><body background="SigProgS_files/greybgd.jpg">
+
+<table align="RIGHT" background="SigProgS_files/main_bg.gif" border="0"><tbody><tr><td>
+<img src="SigProgS_files/Ls.gif" alt="No previous" border="0">
+<a href="http://www.iwriteiam.nl/SigProg.html" title="Up"><img src="SigProgS_files/U.gif" alt="Up" border="0"></a>
+<a href="http://www.iwriteiam.nl/SigProgM.html" title="Next"><img src="SigProgS_files/R.gif" alt="Next" border="0"></a>
+</td></tr></tbody></table>
+
+
+<h1>Self printing signature programs</h1>
+
+<a href="http://www.iwriteiam.nl/SigProg.html">Signature programs</a> are short programs that
+people have been using as part of their signature. They are small
+(2 to 4 lines) programs, that are often rather cryptic because they
+have to save space as much as possible.
+On this page some self printing signature programs are presented.
+Self printing programs are also called
+<a href="http://www.mines.edu/students/b/bolmstea/quines/">Quines</a>.
+
+<h2><a name="dd">Dario Dariol</a></h2>
+
+Below are three self printing programs in C written by Dario Dariol,
+which are described in the standard GNU distribution since 1990:
+<pre>main(a,b){a="main(a,b){a=%c%s%c;b='%c';printf(a,b,a,b,b);}";b='"';printf(a,b,a,b,b);}
+main(a){a="main(a){a=%c%s%c;printf(a,34,a,34);}";printf(a,34,a,34);}
+main(a){printf(a="main(a){printf(a=%c%s%c,34,a,34);}",34,a,34);}
+</pre>
+Only the first version is ASCII independent. The first two are compiler
+independent. Dario also wrote a <a href="http://www.iwriteiam.nl/SigProgC.html#dd">hiding siganture programs</a>
+and a <a href="#ddjava">self-printing one in Java</a>.
+
+<h2><a name="md">Mike Davis and Paul Makepeace</a></h2>
+
+Another self printing program in C is:
+<p>
+
+</p><pre>char *p="char *p=%c%s%c;main(){printf(p,34,p,34);}";main(){printf(p,34,p,34);}
+</pre>
+
+This has been used by Mike Davis <tt>..!att!ihlpm!jmdavis</tt>, and
+Paul Makepeace.
+
+<h2><a name="mf">By Maarten Fokkinga using Miranda</a></h2>
+
+A shorter one, in Miranda by <a href="http://www.cs.utwente.nl/%7Efokkinga/">
+Maarten Fokkinga</a>:
+<pre>t c=c++show c;self=s"t c=c++show c;self=s"
+</pre>
+
+<h2><a name="tp">Tom Phoenix using Korne shell</a></h2>
+
+An this one, which is even shorter, works for Tom Phoenix on his Unix system:
+<pre>% /bin/ksh: /bin/ksh::  not found
+</pre>
+
+<h2><a name="ts">Teemu Suikki</a></h2>
+
+<pre>main() {char *p,a;printf(p="main() {char *p,a;printf(p=%c%s%c,a='",a='"',p,
+a);printf(p="%c',p,%ca);printf(p=%c%s%c%c,a,10,a,p,a,10,a,%c%s%c,a,10);}%c"
+,a,10,a,p,a,10,a," *** Email: xxxxxxx@xxx.xx *** IRC: Zuikkis *** ",a,10);}
+</pre>
+
+<h2>A self printing <a href="http://www.iwriteiam.nl/SigProgPerl.html#ds">Perl</a> signature program by
+	<a name="ds" href="http://www.linux.ucla.edu/%7Edimator/">Dimator Shahbaz</a></h2>
+
+<pre>$_=q{$_=q{Q};s/Q/$_/;print};s/Q/$_/;print
+</pre>
+
+<h2><a name="ddjava">Self printing Java signature program by Dario Dariol</a></h2>
+
+A little long (444 characters) for a signature, but as the first Java attempt,
+worth mentioning:
+
+<pre>import java.text.*;class a{public static void main(String x[]){char b[]={34};char c[]={123};String s[]=new String[3];s[0]="import java.text.*;class a{2}public static void main(String x[]){2}char b[]={2}34};char c[]={2}123};String s[]=new String[3];s[0]={1}{0}{1};s[1]=new String(b);s[2]=new String(c);System.out.println(MessageFormat.format(s[0],s));}}";s[1]=new String(b);s[2]=new String(c);System.out.println(MessageFormat.format(s[0],s));}}
+</pre>
+
+He also wrote <a href="#dd">some in C</a> and <a href="http://www.iwriteiam.nl/SigProgC.html#dd">a
+hiding program signature program</a>.
+
+<h2><a name="BReflection">Self printing Python signature</a> program by
+	<a href="http://slashdot.org/%7EBReflection">BReflection</a></h2>
+
+<pre>python -c "x='python -c %sx=%s; print x%%(chr(34),repr(x),chr(34))%s'; print x%(chr(34),repr(x),chr(34))"
+</pre>
+
+<p></p><hr>
+<address>
+<a href="http://www.iwriteiam.nl/SigProg.html">Signature programs</a> |
+<a href="http://www.iwriteiam.nl/index.html">home and email</a>
+</address>
+<pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+
+</body></html>

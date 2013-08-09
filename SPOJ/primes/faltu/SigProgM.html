@@ -1,0 +1,239 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1"><!-- base href="http://www.iwriteiam.nl/SigProgM.html" -->
+
+<title>Mandelbrot set signature programs</title>
+</head><body background="SigProgM_files/greybgd.jpg">
+
+<table align="RIGHT" background="SigProgM_files/main_bg.gif" border="0"><tbody><tr><td>
+<a href="http://www.iwriteiam.nl/SigProgS.html" title="Previous"><img src="SigProgM_files/L.gif" alt="Previous" border="0"></a>
+<a href="http://www.iwriteiam.nl/SigProg.html" title="Up"><img src="SigProgM_files/U.gif" alt="Up" border="0"></a>
+<a href="http://www.iwriteiam.nl/SigProgC.html" title="Next"><img src="SigProgM_files/R.gif" alt="Next" border="0"></a>
+</td></tr></tbody></table>
+
+<h1>Mandelbrot set signature programs</h1>
+
+<a href="http://www.iwriteiam.nl/SigProg.html">Signature programs</a> are short programs that
+people have been using as part of their signature. They are small
+(2 to 4 lines) programs, that are often rather cryptic because they
+have to save space as much as possible.
+Below a collection of <a href="http://en.wikipedia.org/wiki/Mandelbrot_set">Mandelbrot set</a> signature programs is given.
+
+
+<h2><a name="mue">Bernhard Muenzer</a></h2>
+
+His Mandelbrot signature programs used the variables <tt>m,u,e</tt>,
+and <tt>g,s,f</tt>, which are part of his email address.
+He did not create his Mandelbrot signature program from scratch,
+but has lost the original version unfortunately.
+The oldest version of his signature program, which he has kept is
+from 1993, and is still 4 lines long.
+<pre>main(){char*c=" _.+=#\n)rezneuM drahnreB(xx.xxx@xxx";int x,t,y;float a,
+b,d;for(y=0;y&lt;25;y++){for(x=0;x&lt;80;x++){t=b=d=0;do{a=b*b-d*d-2.1+.035*x
+;d=2*b*d+.088*y-1.1;b=a;t++;}while(t&lt;32&amp;&amp;b*b+d*d&lt;4);putchar(c[x&gt;79?6:y&gt;
+23&amp;&amp;x&lt;28?34-x:t&gt;31?0:t&gt;&gt;4?5:t&gt;&gt;3?4:t&gt;&gt;2?3:t&gt;&gt;1?2:1]);}}} /*xxx@xxx.xx*/
+</pre>
+
+Arjan Kenter has <a href="http://www.kenter.demon.nl/sigs.html">archived</a> one that already has <tt>m,u,e</tt>, and <tt>,g,s,f</tt>
+as variable names:
+<pre>int m,u,e;float g,s,f;char*c=" _.+=#\n)rezneuM drahnreB(xxxxxx@xxx";ma\
+in(){for(e=0;e&lt;25;e++){for(m=0;m&lt;81;m++){u=s=f=0;do{g=s*s-f*f-2.1+.035*
+m;f=2*s*f+.088*e-1.1;s=g;u++;}while(u&lt;32&amp;&amp;s*s+f*f&lt;4);putchar(c[m&gt;79?6:e
+&gt;23&amp;&amp;m&lt;28?34-m:u&gt;31?0:u&gt;&gt;4?5:u&gt;&gt;3?4:u&gt;&gt;2?3:u&gt;&gt;1?2:1]);}}}/*xxx@xxx.xx*/
+</pre>
+In this archive there is also a newer 3-line version that has an
+uglier Mandelbrot:
+<pre>int m,u,e;float g,s,f;char*_=")xx.xxx@xxx(rezneuM drahnreB\n";main(){for(
+;e&lt;1944;){u=s=f=0;do{g=s*s-f*f-2.1+.035*(m=e%81);f=2*s*f+e/81*.088-1.1;s
+=g;}while(++u&lt;19&amp;&amp;g*s+f*f&lt;4);putchar(_[++e&gt;1863&amp;&amp;m&lt;28?27-m:m&gt;79?28:u]);}}
+</pre>
+Somewhere here <a href="#jrh">Jay R. Hill</a>'s version banches off
+(it contains the `<tt>char*_</tt>' part); which he soon dismissed again
+for his current version to preserve a few more bytes.
+
+<h2><a name="vr">Vicky Robinson</a></h2>
+
+Here is even a program containing a virus:
+<pre> int V,i,c=0;float k,y,R;main(){for(;c&lt;1863;putchar((++c&gt;918&amp;&amp;952&gt;c
+?60-V:i)["\nRV- .gis s'ydobyna ni ton m'I tuB"]))for(i=y=k=0;(V=c%81
+ )&lt;80&amp;&amp;R*k+y*y&lt;6&amp;&amp;22&gt;++i;y=2*k*y+c/81*.09-1,k=R)R=k*k-y*y-2+V/27.;}
+</pre>
+(on <a href="http://groups.google.nl/alt.folklore.urban"><tt>alt.folklore.urban</tt></a>,
+Vicky Robinson's words `But I'm not in anybody's sig'
+caused an epidemy of the VI signature virus).
+
+<h2><a name="whh">Wei-Hwa Huang</a></h2>
+
+<pre>/* xxxxxx@xxx.xxxxxxx.xxx (Wei-Hwa Huang) */
+int m,u,e=0;float l,_,I;main() {for(;e&lt;1863; putchar((++e&gt;924&amp;&amp;952&gt;
+e?60-m:u) ["\n  ude.hcetlac.occ@gnauhw   ]"])) for(u=_=l=0;(m=e%81)
+&lt;80&amp;&amp;I*l+_*_ &lt;6&amp;&amp;25&gt;++u;_=2*l*_+e/81*.09-1,l=I)I=l*l-_*_-2+.035*m;}
+</pre>
+This on is based on the one of <a href="#mue" --1--="">Bernhard Muenzer</a> above.
+It contains the <tt>m,u,e</tt> variable names.
+
+<h2><a name="ma">Marko Aalto</a></h2>
+
+<pre>/*   xxxxx.xxxxx@xxxxxxxx.xx    |    http://www.helsinki.fi/~maaalto/  */
+main(){char h[2001]=" Ma+\x1b[H",*k,c;float z=20,D,a,i,s,y;for(;k=h+7,z*=
+8,z&gt;8e-4;puts(h))for(s=.119+z;(k-h-7)%80&lt;1?y=1.4+z,s-=z/15:k-h-1768;y-=z
+/40,*k++=h[c/4&amp;3])for(c=a=D=0;--c&amp;&amp;a*a+D*D&lt;4;a=a*a-D*D-y,D=2*i*D+s)i=a;}
+</pre>
+
+<h2><a name="cc">Carson Cheung</a></h2>
+
+<pre>float o=0.075,h=1.5,T,r,O,l,I;int _,L=80,s=3200;main(){for(;s%L||
+(h-=o,T= -2),s;4 -(r=O*O)&lt;(l=I*I)|++ _==L&amp;&amp;write(1,(--s%L?_&lt;L?--_
+%6:6:7)+"World! \n",1)&amp;&amp;(O=I=l=_=r=0,T+=o /2))O=I*2*O+h,I=l+T-r;}
+[ Carson Cheung, Computer Science, University Of Manchester, UK ]
+</pre>
+
+<h2><a name="ebvk">E.B. van Koperen</a></h2>
+
+<pre>/* Try me and stagger. With x size as parameter! y size=auto scaling!*/float R,
+y=1.5,x,r,A,P,B;int u,h=80,n=80,s;main(c,v)int c;char **v;{s=(c&gt;1?(h=atoi(v[1]
+)):h)*h/2;for(R=6./h;s%h||(y-=R,x=-2),s;4&lt;(P=B*B)+(r=A*A)|++u==n&amp;&amp;putchar(*(((
+--s%h)?(u&lt;n?--u%6:6):7)+"World!\n"))&amp;&amp;(A=B=P=u=r=0,x+=R/2))A=B*2*A+y,B=P+x-r;}
+</pre>
+
+<h2><a name="dj">David Johnston</a></h2>
+
+<pre>float l,I,Q,_,o;int E;main(){I=1.125;while(I&gt;=-1.225){for(l=
+-2;l&lt;=1;l+=3/79.0){Q=_=0;for(E=127;Q*Q+_*_&lt;4.0&amp;&amp;--E&gt;32;){o=Q
+;Q=Q*Q-_*_+l;_=2*o*_+I;}putchar(E);}putchar(10);I-=9/88.0;}}
+</pre>
+
+<h2><a name="pl" href="http://www.iwriteiam.nl/O_hackers.html#PLundin" --1--="">Patrik Lundin</a></h2>
+
+A Mandelbrot plotter:
+<pre>main(c){float t,x,y,b=-2,a=b;for(;b-=a&gt;2?.1/(a=-2):0,b&lt;2;putchar(30+
+c),a+=.0503)for(x=y=c=0;++c&lt;90&amp;x*x+y*y&lt;4;y=2*x*y+b,x=t)t=x*x-y*y+a;}
+</pre>
+
+He wrote <a href="http://www.iwriteiam.nl/SigProgC.html#pl">more C signature</a>.
+
+<h2><a name="ld" href="http://www.demailly.com/%7Edl/">Laurent Demailly</a></h2>
+
+<pre>main(){char x,y=-1,t,n,*c="-=+X# \nrf.mpsbo.toylph@ld";while(++y&lt;25)
+{for(x=0;x&lt;80;){float a,b,d,i=2.2/25*y-1.1,r=2.8/80*x++-2.1;t=b=d=0;do{
+a=b*b-d*d+r;d=2*b*d+i;b=a;}while(++t&lt;32&amp;&amp;b*b+d*d&lt;4);for(n=0;t&amp;~1;t/=2,
+n++);putchar(c[x&gt;79?6:y&gt;23&amp;&amp;x&lt;19?25-x:n]);}}}
+</pre>
+
+He also wrote a <a href="http://www.iwriteiam.nl/SigProgPS.html#ld">PostScript signature</a>.
+
+
+<h2><a name="jrh">Jay R. Hill</a></h2><a name="jrh">
+
+<pre>int main(){float g,s,f,r,i;char*_="/,;&lt;mhl/brnoAmmhik&lt;mmhI!/S!x`K\n";int m,u,e
+=0;_[30]++;for(;e&lt;3919;){u=(256*(s=(r=.0325*(m=e%80)-2)*r+(i=.047*(e/80)-1.128
+)*i)-96)*s+32*r&lt;3?22:16+32*r+16*s&lt;1?29:0;if(u==(s=f=0))do g=s*s-f*f+r;while((f
+=2*s*f+i)*f+(s=g)*g&lt;4&amp;&amp;++u&lt;25);putchar(_[++e&gt;3840&amp;&amp;m&lt;30?29-m:m&gt;78?30:u]^1);}}
+</pre>
+Note the exact tests for a point in the period one cardioid (marked H) and
+the period two circle (at -1, marked J). These tests also save a
+lot of time. This one is based on one of </a><a href="#mue">Bernhard Muenzer</a>'s
+versions of the program. It contains the <tt>g,s,f</tt> variables.
+<p>
+Here is an even shorter version by him:
+</p><pre>main(){int f,g,h=0;float a,b,c,d,e;for(;h&lt;3920;putchar("!/-,;&lt;:lnb/bh`r\
+/ylqbAmmhI/S/x`K\013"[++h&gt;3840&amp;&amp;g&lt;25?31-g:g&gt;79?31:f]^1))if((f=(256*(c=(d
+=(g=1+h%80)/31.-2)*d+(e=.047*(h/80-24))*e)-96)*c+32*d&lt;3?24:16+32*d+16*c&lt;
+1?30:0)==0)for(a=d,b=c=0;(b=2*b*c+e)*b+(c=a)*a&lt;=4&amp;&amp;++f&lt;26;a=d-b*b+c*c);}
+</pre>
+
+<h2><a name="ag">Andrew Garrard</a></h2>
+
+<pre>/* o._.o  (C) 1996 Andrew Garrard, xxxxxxxxxx@xxxxxxx.xxxxx.xx.xx  o~\_/~o */
+/* ((^)) */main(c){float x,y=2,X,Y,Z;for(;(x=-2)&lt;(y-=.1);puts(""/* (/\ /\) */
+/* O)_(O */ ))for(;(X=x+=.05)&lt;2;c=printf("%c","  .-:|O8M#"[c])) /* (\@o@/) */
+/* O/ \O */for(Y=y;X*X+Y*Y&lt;4&amp;&amp;c++&lt;8;Z=x+X*X-Y*Y,Y=y+2*X*Y,X=Z);}/* ~~~ ~~~ */
+</pre>
+
+Cute but long:
+<pre>/*  /)_(\  */int main(void) {float x,y=2,X, /* Yet   m   f */
+/* (/. .\) */Y,_,i;int c;for(;(y-=.1)&gt;-2;){ /*      o    a */
+/*  \(T)/  */for(x=-2;(x+=.1)&lt;2;){X=x;Y=y;c /*     r   . c */
+/* ()   () */=0;while((X*X+Y*Y)&lt;=4&amp;&amp;c++&lt;7){ /* f  e   g  t */
+/*  ()-()  */_=x+X*X-Y*Y;i=2*X*Y+y;X=_;Y=i; /* r     i   o */
+/* Andrew  */}printf("%c",*(" .-:|O8M#"+c)) /* o    s    r */
+/* Garrard */;}printf("\n");}} /* fluppeteer   m  the    y */
+</pre>
+
+He has <a href="http://www.iwriteiam.nl/SigProgC.html#ag">some more C signature programs</a>
+
+<h2><a name="rh" href="http://pauillac.inria.fr/%7Eharley/">Robert Harley</a></h2>
+
+In .pgm format:
+<pre>float x,y=1,s=1./128,X,Y,V;main(i){for(puts("P5 257 127 63");X=Y=0,x?/*Rob H.*/
+x+=s,1:(x=-2,y-=s);putchar(i))for(i=64;--i&amp;&amp;X*X+(V=Y*Y)&lt;4;X=X*X-V+x)Y=2*X*Y+y;}
+</pre>
+
+He has <a href="http://www.iwriteiam.nl/SigProgC.html#rh">some more C signature programs</a>
+
+<h2><a name="jh">John Holder</a></h2>
+
+<pre>float o=0.075,h=1.5,T,r,O,l,I;int _,L=80,s=3200;main(){for(;s%L||
+(h-=o,T= -2),s;4 -(r=O*O)&lt;(l=I*I)|++ _==L&amp;&amp;write(1,(--s%L?_&lt;L?--_
+%6:6:7)+"Mandel \n",1)&amp;&amp;(O=I=l=_=r=0,T+=o /2))O=I*2*O+h,I=l+T-r;}
+/* xxxxxxx@xxxx.xxx - UNIX specialist, Paranet, Inc, Denver,CO */
+</pre>
+
+<h2><a name="mvw">Signature programs by Mark VandeWettering</a></h2>
+
+<pre>/* __  __ __   ____      __*/ float e,a,b,c,d;main(i){for(;b&lt;4;b+=.1){for(a=0;
+/*|  \/  |\ \ / /\ \    / /*/ a&lt;4;a+=.06){c=d=0;for(i=99;--i&amp;&amp;c*c+d*d&lt;4;)e=c*c
+/*| |\/| | \ V /  \ \/\/ / */ -d*d+a-2,d=2*c*d+b-2,c=e;putchar("X =."[i&amp;3]);}
+/*|_|  |_ark\_/ande\_/\_/ettering &lt;xxxxx@xxxxxxxxxxxxxxx.xxx&gt; */ puts("");}}
+</pre>
+
+He also as <a href="http://www.iwriteiam.nl/SigProgC.html">Brainf**k to C compiler signature program</a>.
+
+<p></p><hr>
+<address>
+<a href="http://www.iwriteiam.nl/SigProg.html">Signature programs</a> |
+<a href="http://www.iwriteiam.nl/index.html">home and email</a>
+</address>
+<pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+
+</body></html>

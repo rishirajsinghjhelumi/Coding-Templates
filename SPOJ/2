@@ -1,0 +1,67 @@
+#include<stdio.h>
+typedef long long int ull;
+ull digit[9][10];
+ull count[2][10];
+ull num_digits(ull x,ull n);
+void print();
+int main()
+{
+	ull i,c=1,x,j;
+	ull d[9]={0,1,10,190,2890,38890,488890,5888890,68888890};
+	for(i=0;i<9;i++)
+		digit[i][0]=d[i];
+	for(i=1;i<9;i++)
+	{
+		x = i*c;
+		for(j=1;j<10;j++)
+			digit[i][j] = x;
+		c*=10;
+	}
+	ull a,b,t;
+	while(scanf("%lld%lld",&a,&b) && (a|b))
+	{
+		num_digits(b,0);
+		//num_digits(a-1,1);
+		//for(i=0;i<10;i++)
+		//	printf("%lld ",count[0][i]-count[1][i]);
+		//printf("\n");
+	}
+	return 0;
+}
+ull num_digits(ull x,ull n)
+{
+	ull i,ten=1;
+	for(i=0;i<10;i++)
+		count[n][i] = 0;
+	ull a[10],j=0,b;
+	while(x)
+	{
+		a[j++] = x%10;
+		x/=10;
+		ten*=10;
+	}
+	ten/=10;
+	for(i=j-1;i>=0;i--)
+	{
+		ull num=0;
+		b = a[i];
+		printf("i==%lld b==%lld\n",i,b);
+		for(j=0;j<10;j++)
+			count[n][j] += b*digit[i][j];
+		for(j=1;j<b;j++)
+			count[n][j] += ten;
+		for(j=i-1;j>=0;j--)
+			num += num*10 + a[j];
+		count[n][b] += num+1;
+	}
+	for(i=0;i<10;i++)
+		printf("%lld ",count[n][i]);
+	printf("\n");
+}
+void print()
+{
+	int i;
+	for(i=0;i<10;i++)
+		printf("%lld ",count[n][i]);
+	printf("\n");
+}

@@ -1,0 +1,28 @@
+x,y,p,q,r,s,c,t,m;
+C(a,b,l)
+{
+	if((a==p&&b==q)||(a==r&&b==s)||a>x||b>y||a<0||b<0)
+		return;
+	if(a==x&&b==y)
+	{
+		if(m>l)
+			m=l,c=1;
+		else if(m==l)
+			c++;
+		return;
+	}
+	C(a+1,b,l+1);
+	C(a,b+1,l+1);
+}
+main()
+{
+	scanf("%d",&t);
+	while(t--)
+	{
+		c=0;
+		m=1<<30;
+		scanf("%d%d%d%d%d%d",&x,&y,&p,&q,&r,&s);
+		C(0,0,0);
+		printf("%d\n",c);
+	}
+}

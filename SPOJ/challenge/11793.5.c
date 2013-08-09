@@ -1,0 +1,1 @@
+x,y,p,q,r,s,c;C(a,b,l){if(a>x||b>y||a==p&&b==q||a==r&&b==s);else if(a==x&&b==y)c++;else C(a+1,b,l+1),C(a,b+1,l+1);}main(t){for(scanf("%d",&t);t--;scanf("%d%d%d%d%d%d",&x,&y,&p,&q,&r,&s),c=0,C(0,0,0),printf("%d\n",c));return 0;}
